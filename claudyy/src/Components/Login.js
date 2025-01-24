@@ -28,7 +28,7 @@ const Login = () => {
     }
 
     try {
-        const url = 'https://sortify-visualizer.vercel.app/auth/login';
+        const url = 'https://sortify-backend.vercel.app/auth/login';
         const response = await fetch(url, {
           method: 'POST',
           headers: {
