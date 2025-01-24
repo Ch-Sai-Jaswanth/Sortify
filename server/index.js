@@ -6,6 +6,12 @@ const cors = require('cors');
 require('dotenv').config();
 require('./Models/db');
 
+const corsOptions = {
+    origin: 'https://sortify-claudyy-ui.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  };
+
 const PORT = process.env.PORT || 5000;
 
 app.get('/hai', (req, res) => {
@@ -13,7 +19,7 @@ app.get('/hai', (req, res) => {
 })
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use('/auth', require('./Routes/AuthRouter'));
 app.use('/products', require('./Routes/ProdRouter'));
 
