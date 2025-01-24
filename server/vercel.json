@@ -11,5 +11,15 @@
             "src" : "/(.*)",
             "dest" : "index.js"
         }
-    ]
+    ],
+    "functions": {
+    "api/auth/login.js": {
+      "maxDuration": 10,
+      "cors": {
+        "origin": ["https://sortify-claudyy-ui.vercel.app", "https://sortify-ui.vercel.app"],
+        "methods": ["GET", "POST", "PUT", "DELETE"],
+        "allowedHeaders": ["Content-Type"]
+      }
+    }
+  }
 }
