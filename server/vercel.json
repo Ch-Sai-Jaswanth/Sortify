@@ -1,29 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/auth/login.js": {
-      "maxDuration": 10,
-      "cors": {
-        "origin": [
-          "https://sortify-claudyy-ui.vercel.app",
-          "https://sortify-ui.vercel.app"
-        ],
-        "methods": ["GET", "POST", "PUT", "DELETE"],
-        "allowedHeaders": ["Content-Type"]
-      }
-    },
-    "api/auth/signup.js": {
-      "maxDuration": 10,
-      "cors": {
-        "origin": [
-          "https://sortify-claudyy-ui.vercel.app",
-          "https://sortify-ui.vercel.app"
-        ],
-        "methods": ["GET", "POST", "PUT", "DELETE"],
-        "allowedHeaders": ["Content-Type"]
-      }
-    }
-  },
   "routes": [
     {
       "src": "/api/auth/login",
