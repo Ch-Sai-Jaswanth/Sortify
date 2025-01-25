@@ -13,10 +13,21 @@
         }
     ],
     "functions": {
-    "api/auth/login.js": {
+    "api/auth/login": {
       "maxDuration": 10,
       "cors": {
         "origin": ["https://sortify-claudyy-ui.vercel.app", "https://sortify-ui.vercel.app"],
+        "methods": ["GET", "POST", "PUT", "DELETE"],
+        "allowedHeaders": ["Content-Type"]
+      }
+    },
+    "api/auth/signup": {
+      "maxDuration": 10,
+      "cors": {
+        "origin": [
+          "https://sortify-claudyy-ui.vercel.app",
+          "https://sortify-ui.vercel.app"
+        ],
         "methods": ["GET", "POST", "PUT", "DELETE"],
         "allowedHeaders": ["Content-Type"]
       }
