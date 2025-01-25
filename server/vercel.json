@@ -1,27 +1,18 @@
 {
-    "version" : 2,
-    "builds" : [
-        {
-            "src" : "index.js",
-            "use" : "@vercel/node"
-        }
-    ],
-    "routes" : [
-        {
-            "src" : "/(.*)",
-            "dest" : "index.js"
-        }
-    ],
-    "functions": {
-    "api/auth/login": {
+  "version": 2,
+  "functions": {
+    "api/auth/login.js": {
       "maxDuration": 10,
       "cors": {
-        "origin": ["https://sortify-claudyy-ui.vercel.app", "https://sortify-ui.vercel.app"],
+        "origin": [
+          "https://sortify-claudyy-ui.vercel.app",
+          "https://sortify-ui.vercel.app"
+        ],
         "methods": ["GET", "POST", "PUT", "DELETE"],
         "allowedHeaders": ["Content-Type"]
       }
     },
-    "api/auth/signup": {
+    "api/auth/signup.js": {
       "maxDuration": 10,
       "cors": {
         "origin": [
@@ -32,5 +23,15 @@
         "allowedHeaders": ["Content-Type"]
       }
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/auth/login",
+      "dest": "/api/auth/login.js"
+    },
+    {
+      "src": "/api/auth/signup",
+      "dest": "/api/auth/signup.js"
+    }
+  ]
 }
